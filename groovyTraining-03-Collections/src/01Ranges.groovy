@@ -49,11 +49,13 @@ dayRange.each { day ->
 println dayRange.size()
 println dayRange.contains(Days.WEDNESDAY)
 
-// Bonus: next() and previous() are equivalent to
-// ++ and -- operators.
-def wednesday = Days.WEDNESDAY
-assert Days.THURSDAY == ++wednesday
-assert Days.WEDNESDAY == --wednesday
+// next() and previous() are equivalent to ++ and -- operators.
+// /!\ REMEMBER that ++ and -- change the value of variables whereas next() and previous() don't (see example below).
+def myDay = Days.WEDNESDAY
+assert Days.THURSDAY == ++myDay
+assert Days.WEDNESDAY == --myDay
+assert Days.THURSDAY == myDay.next()
+assert Days.TUESDAY == myDay.previous()
 println "----------------------------"
 
 
