@@ -12,14 +12,14 @@ println r.class.name
 println r.from // starting value
 println r.to // ending value
 
-assert (0..10).contains(0) // comparison with true by default
+assert (0..10).contains(0) // comparison with true by default ("== true")
 assert (0..10).contains(10)
 assert (0..10).contains(-1) == false
-assert (0..10).contains(11) == false
+assert !(0..10).contains(11) // NOT operator (!) is the same as "== false"
 
 assert (0..<10).contains(0)
 assert (0..<10).contains(9)
-assert (0..<10).contains(10) == false
+assert !(0..<10).contains(10)
 
 Range letters = 'a'..'z'
 println letters.toList()
@@ -47,6 +47,8 @@ dayRange.each { day ->
 }
 
 println dayRange.size()
+println dayRange.from
+println dayRange.to
 println dayRange.contains(Days.WEDNESDAY)
 
 // next() and previous() are equivalent to ++ and -- operators.
