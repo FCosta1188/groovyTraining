@@ -4,7 +4,8 @@ The user can access elements by their integer index (position in the list), and 
 Unlike sets, lists typically allow duplicate elements.
 */
 
-def numArrayList = [1,2,3,6,7,9,4,5,3,6,8,9] // def uses ArrayList by default
+def numArrayList = [11,22,33] // def uses ArrayList by default
+println numArrayList
 List nums = [1,2,3,6,7,9,4,5,3,6,8,9]
 println nums
 println nums.class.name
@@ -18,7 +19,7 @@ nums[0] = 78
 nums + 10 // overloaded plus() method, which does not change the original list (pushes 7 to the list)
 nums << 66 // like push() method, inserts an item at the tail, modifying the original list
 println nums
-nums.pop() // removes the item at the head (78), same as removeAt(0)
+nums.pop() // removes the item at the head (78), same as removeAt(0)?
 nums.removeAt(0) // removes 1
 
 def newNums = nums - 3 // overloaded minus() method, same as plus() (removes 3 from the list without changing the original list)
@@ -27,6 +28,7 @@ println newNums
 nums = []
 println nums
 println"-----------------------------"
+
 
 // flatten(): the list and any nested arrays or collections have their contents (recursively) added to the new List
 //            (used to flatten nested array/collections). The original list won't be changed.
@@ -55,6 +57,7 @@ println nums.reverse()
 println nums.unique()
 println"-----------------------------"
 
+
 // Enforcing Java Collections: List (LinkedList), Set (SortedSet)
 def evens = [10,2,8,4,24,14,2] as Set // enforced coercion
 println evens
@@ -62,3 +65,16 @@ println evens.class.name
 def sortedEvens = [10,2,8,4,24,14,2] as SortedSet // enforced coercion
 println sortedEvens
 println sortedEvens.class.name
+println "---------------------"
+
+
+// Exercise
+def days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
+println days
+println days.size()
+days.remove('SUN')
+println days
+days << 'SUN'
+println days
+println days[2]
+println "---------------------"

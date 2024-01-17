@@ -36,6 +36,7 @@ println days.toList()
 println "----------------------------"
 
 
+// Exercise
 enum Days {
     MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY, SUNDAY
 }
