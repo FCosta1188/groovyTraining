@@ -7,10 +7,12 @@ println "-----------------------------------"
 
 
 // Converting Data Types
-// Explicit: casting
-def myFloat = (float) 1.0 //the default of this def would be BigDecimal
+def myInteger = 1 // Implicit: coercion, performed automatically when declaring a def. 1 is Integer by default.
+println myInteger.class
+def myFloat = (float) 1.0 // // Explicit: casting. The default of this def would be BigDecimal.
 println myFloat.class
-// Implicit: coercion, performed automatically when declaring a def
+def myDouble = 2 as Double // Explicit: enforced coercion. The default of this def would be Integer.
+println myDouble.class
 println "-----------------------------------"
 
 

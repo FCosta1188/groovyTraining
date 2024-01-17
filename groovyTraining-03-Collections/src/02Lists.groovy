@@ -8,48 +8,57 @@ def numArrayList = [1,2,3,6,7,9,4,5,3,6,8,9] // def uses ArrayList by default
 List nums = [1,2,3,6,7,9,4,5,3,6,8,9]
 println nums
 println nums.class.name
+println"-----------------------------"
 
-// add | remove | get | clear
 
+// View and manipulate list items
 nums.push(99)
 nums.putAt(0,77)
 nums[0] = 78
-nums + 7
-nums << 66
+nums + 10 // overloaded plus() method, which does not change the original list (pushes 7 to the list)
+nums << 66 // like push() method, inserts an item at the tail, modifying the original list
+println nums
+nums.pop() // removes the item at the head (78), same as removeAt(0)
+nums.removeAt(0) // removes 1
 
-nums.pop()
-nums.removeAt(0)
-def newList = nums - 3
-println newList
+def newNums = nums - 3 // overloaded minus() method, same as plus() (removes 3 from the list without changing the original list)
+println newNums
 
-println nums.getAt(0..3)
 nums = []
+println nums
+println"-----------------------------"
 
-// flatten
+// flatten(): the list and any nested arrays or collections have their contents (recursively) added to the new List
+//            (used to flatten nested array/collections). The original list won't be changed.
 nums << [3,4,5]
 nums << [1,2]
 println nums
 println nums.flatten()
 
-// equals
+// equals()
 def myNumbers = [1,2,3]
 def myNumbers2 = [1,2,3]
 println myNumbers.equals(myNumbers2)
 
-// findAll
-println nums.findAll { it == 4 }
-println nums.flatten().findAll { it < 5 }
+// findAll() with closures
+println nums.flatten().findAll { it == 4 } // find all items equal to 4
+println nums.flatten().findAll { it < 5 } // find all items lower than 5
 
-// getAt(Range)
-println nums.getAt(0..5)
+// getAt(Range): gets sublist of elements found in the given index Range
+println nums.flatten().getAt(0..4)
+//println nums.flatten().getAt(0..5) // out of bounds
 
-// reverse list
+// reverse
 println nums.reverse()
 
 // unique
 println nums.unique()
+println"-----------------------------"
 
-// Java Collections List(LinkedList) (Set,SortedSet)
-def evens = [10,2,8,4,24,14,2] as Set
+// Enforcing Java Collections: List (LinkedList), Set (SortedSet)
+def evens = [10,2,8,4,24,14,2] as Set // enforced coercion
 println evens
 println evens.class.name
+def sortedEvens = [10,2,8,4,24,14,2] as SortedSet // enforced coercion
+println sortedEvens
+println sortedEvens.class.name
