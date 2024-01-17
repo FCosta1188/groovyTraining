@@ -1,7 +1,10 @@
 /* http://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/List.html
-
+An ordered collection (also known as a sequence). The user of this interface has precise control over where in the list each element is inserted.
+The user can access elements by their integer index (position in the list), and search for elements in the list.
+Unlike sets, lists typically allow duplicate elements.
 */
 
+def numArrayList = [1,2,3,6,7,9,4,5,3,6,8,9] // def uses ArrayList by default
 List nums = [1,2,3,6,7,9,4,5,3,6,8,9]
 println nums
 println nums.class.name
