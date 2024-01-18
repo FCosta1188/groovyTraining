@@ -36,7 +36,8 @@ mailer.send();
 println "---------------------------"
 
 
-public class Mailer {
+// Groovy
+public class FluentMailer {
 
     def to(String address) {
         println('to')
@@ -54,20 +55,20 @@ public class Mailer {
         println('body')
     }
 
-    def static send(closure){
-        Mailer mailer = new Mailer()
-        mailer.with closure
+    def static send(closure) {
+        FluentMailer fluentMailer = new FluentMailer()
+        fluentMailer.with closure
         println('sending...')
     }
 }
 
-
-Mailer.send {
+FluentMailer.send {
     to("danvega@gmail.com");
     from("danvega@gmail.com");
     subject("Hello Dan");
     body("Message Body");
 }
+println "---------------------------"
 
 
 
