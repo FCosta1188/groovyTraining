@@ -37,13 +37,13 @@ List people = [
         [name:'Jason',city:"Cleveland"]
 ]
 
-println people.find { person -> person.city == "Cleveland" }
-println people.findAll { person -> person.city == "Cleveland" }
-println people.any { person -> person.city == "Cleveland" }
-println people.every { person -> person.city == "Cleveland" }
+println people.find { person -> person.city == "Cleveland" } // object: find the 1st occurrence
+println people.findAll { person -> person.city == "Cleveland" } // collection: find all occurrences
+println people.any { person -> person.city == "Cleveland" } // boolean: true if at least one element in the list satisfy the closure criteria
+println people.every { person -> person.city == "Cleveland" } // boolean: true if all the elements in the list satisfy the closure criteria
 println people.every { person -> person.name.size() >= 3 }
 
-def peopleByCity = people.groupBy { person -> person.city }
+def peopleByCity = people.groupBy { person -> person.city } // collection: elements grouped by the closure criteria
 println peopleByCity
 
 def newyorkers = peopleByCity["New York City"]
