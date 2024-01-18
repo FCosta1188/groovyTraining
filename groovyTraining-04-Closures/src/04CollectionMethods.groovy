@@ -1,19 +1,19 @@
 // each & eachWithIndex
 List favNums = [2,21,44,35,8,4]
 
-for(num in favNums) {
+for(num in favNums) { // regular for-each
     println num
 }
+favNums.each { println it } // .each with closure
 
-favNums.each { println it }
-
-for( int i=0; i<favNums.size(); i++){
+for( int i=0; i<favNums.size(); i++){ // regular for-each with indexes
     println "$i:${favNums[i]}"
 }
-
-favNums.eachWithIndex { num, idx ->
+favNums.eachWithIndex { num, idx -> // .eachWithIndex with closure
     println "$idx:$num"
 }
+println "---------------------------"
+
 
 // findAll
 List days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -21,34 +21,32 @@ List weekend = days.findAll { it.startsWith("S") }
 
 println days
 println weekend
+println "---------------------------"
+
 
 // collect
 List nums = [1,2,2,7,2,8,2,4,6]
-
-List numsTimesTen = []
-nums.each { num ->
-    numsTimesTen << num * 10
-}
-
-List newTimesTen = nums.collect { num -> num * 10 }
-
+List numsTimesTen = nums.collect { num -> num * 10 }
 println nums
 println numsTimesTen
-println newTimesTen
 
-// map functions
+// Alternative version with .each, less efficient and more verbose.
+/*nums.each { num ->
+    numsTimesTen << num * 10
+}*/
+println "---------------------------"
+
+
+// map methods
 def person = [first:"Dan",last:"Vega",email:"danvega@gmail.com"]
 
 person.each { entry ->
     println entry
 }
-
 person.each { k, v ->
     println "$k:$v"
 }
 
-
-// map | filter | reduce
 class Person {
     String name
     int age
@@ -65,3 +63,4 @@ assert people
         .collect {it.name.toUpperCase() }
         .sort()
         .join(', ') == "ANDREW, MARY"
+println "---------------------------"
