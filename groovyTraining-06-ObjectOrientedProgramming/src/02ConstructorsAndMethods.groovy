@@ -17,7 +17,6 @@ class Person {
         // do stuff
     }
 
-
     String getFullName(){
         "$first $last" // return is implicit
     }
