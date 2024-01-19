@@ -1,4 +1,5 @@
 import groovy.transform.ToString
+
 @ToString
 class Person {
 
@@ -16,8 +17,9 @@ class Person {
         // do stuff
     }
 
+
     String getFullName(){
-        "$first $last"
+        "$first $last" // return is implicit
     }
 
     def bar(){

@@ -1,5 +1,5 @@
-// class public by default
-// fields (attributes) private by default
+// class an methods are public by default
+// fields (attributes) are private by default
 
 class Person {
 
