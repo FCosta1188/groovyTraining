@@ -1,4 +1,6 @@
-@groovy.transform.ToString
+import groovy.transform.ToString
+
+@ToString
 class Person {
 
     String first,last
@@ -21,6 +23,7 @@ class PersonService implements IPersonService {
     }
 }
 
+// interfaces define the contract, not the logic, therefore their methods are abstract
 interface IPersonService {
 
     Person find()
@@ -29,5 +32,8 @@ interface IPersonService {
 
 }
 
+
 PersonService personService = new PersonService()
 println personService.find()
+println personService.findAll()
+println "---------------------------------------"
