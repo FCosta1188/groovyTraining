@@ -9,6 +9,11 @@ Traits are a structural construct of Groovy which allow:
 They can be seen as interfaces carrying both default implementations and state.
 */
 
+// When implementing a trait, all the non-abstract (default) methods contained in the trait are implemented by default, without having to override them,
+// but they can still be overridden if a custom implementation is required (similar to default methods in Java interfaces).
+// If the trait contains abstract methods, those have to be implemented/overridden, like in regular interfaces.
+// Traits can also contain fields, so they can have both states (fields) and behaviors (methods), unlike interfaces (methods only).
+// Traits support
 class Bird implements FlyingAbility, SpeakingAbility {
 
     @Override
