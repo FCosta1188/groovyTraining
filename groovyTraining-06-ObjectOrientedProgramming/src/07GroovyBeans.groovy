@@ -71,6 +71,7 @@ class EmployeeGroovyBean implements Serializable { // Equivalent Groovy bean of 
 
     // getters and setters created automatically for each property (hidden)
 
+    // if the default getters and setters created by Groovy are not suitable, they can be replaced by custom ones
     void setFullName(String name){
         fullName = name
     }
@@ -83,6 +84,18 @@ class EmployeeGroovyBean implements Serializable { // Equivalent Groovy bean of 
 
 }
 
+EmployeeGroovyBean emp1 = new EmployeeGroovyBean(first:"Dan",last: "Vega",email: "danvega@gmail.com")
+println emp1
+emp1.fullName = "$emp1.first $emp1.last"
+println emp1.fullName
+
+EmployeeGroovyBean emp2 = new EmployeeGroovyBean()
+emp2.first = "Dan"
+println emp2.first
+println "-----------------------------------------"
+
+// direct field access: useful when a custom getters has to return a value which is different from the original value of the property.
+//                      @ can be used to access the value directly, when calling the getter (see below).
 class DoubleBean {
 
     public Integer value
@@ -97,18 +110,8 @@ class DoubleBean {
 
 }
 
-
-//EmployeeGroovyBean emp = new Employee(first:"Dan",last: "Vega",email: "danvega@gmail.com")
-//println emp
-
-//EmployeeGroovyBean emp = new Employee()
-//emp.first = "Dan"
-
-// println emp.first
-
 DoubleBean db = new DoubleBean()
 db.value = 100
-
-println db.value
-println db.@value
-println "-------------------------"
+println db.value // gets the value of the property through the getter
+println db.@value // direct access to the value of the property
+println "-----------------------------------------"
