@@ -39,4 +39,6 @@ d2.writeDocs()
 
 String.metaClass.shout = { -> toUpperCase() }
 println "hello dan".shout()
+String str = "my string"
+println str.shout()
 println "-----------------------------------"
