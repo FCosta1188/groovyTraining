@@ -1,7 +1,7 @@
 //https://docs.groovy-lang.org/latest/html/api/groovy/xml/MarkupBuilder.html
 import groovy.xml.MarkupBuilder
 
-FileWriter writer = new FileWriter('html/about.html')
+FileWriter writer = new FileWriter('html/02MarkupBuilder-HTML.html')
 MarkupBuilder builder = new MarkupBuilder(writer)
 
 List courses = [
