@@ -8,6 +8,8 @@ class Person {
     String first
     String last
     String email
+
+    // TupleConstructor creates a constructor based in the class properties, following the order in which they are declared
 }
 
 Person p = new Person("Dan","Vega","danvega@gmail.com")
