@@ -1,4 +1,4 @@
-//https://docs.groovy-lang.org/latest/html/api/groovy/lang/Singleton.html
+//https://docs.groovy-lang.org/next/html/gapi/groovy/lang/Singleton.html
 
 @Singleton
 class DatabaseConnection {
