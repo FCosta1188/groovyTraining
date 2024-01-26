@@ -1,3 +1,6 @@
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+
 //import groovyx.net.http.ContentType
 //import groovyx.net.http.RESTClient
 
@@ -5,8 +8,10 @@
 println 'http://groovy-lang.org'.toURL().text
 
 // REST Client - Native Groovy GET and POST: https://stackoverflow.com/questions/25692515/groovy-built-in-rest-http-client
-def get = new URL("https://api.chucknorris.io/jokes/random").openConnection()
-get.setRequestProperty("User-Agent", "Mozilla 5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.11)");
+//def get = new URL("https://api.chucknorris.io/jokes/random").openConnection()
+def get = new URL("https://api.chucknorris.io/jokes/search?query=rockets").openConnection()
+get.setRequestProperty("User-Agent", "Mozilla 5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.11)")
+get.setRequestProperty("Content-Type", "application/json; charset=utf-8")
 def getText = get.getInputStream().getText()
 println getText
 

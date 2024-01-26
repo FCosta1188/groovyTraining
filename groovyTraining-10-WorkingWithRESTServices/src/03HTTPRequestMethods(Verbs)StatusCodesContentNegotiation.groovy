@@ -18,7 +18,7 @@
     304: Not Modified
     307: Temporary Redirect
 4xx: client error (eg: 404 page not found)
-    200: Bad Request
+    400: Bad Request
     401: Unauthorized
     403: Forbidden
     404: Not Found
