@@ -23,3 +23,4 @@ builder.sports { // sport and name are tags (outer and inner), id and foo are at
         name '' // not omitted
     }
 }
+println '----------------------------'

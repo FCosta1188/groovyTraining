@@ -42,8 +42,8 @@ FileReader xmlReader = new FileReader('xml/03Exercise-MarkupBuilder.xml')
 def xmlBooksGPathResult = new XmlSlurper().parse(xmlReader)
 
 // Groovy approach
-def books = xmlBooksGPathResult.book.each {
-    new Book(it.title.text(), it.author.text(), Double.parseDouble(it.price.text()))
+def books = xmlBooksGPathResult.book.each { book ->
+    new Book(book.title.text(), book.author.text(), Double.parseDouble(book.price.text()))
 }
 
 // Java approach
@@ -82,3 +82,4 @@ htmlBuilder.html {
         }
     }
 }
+println '----------------------------'
