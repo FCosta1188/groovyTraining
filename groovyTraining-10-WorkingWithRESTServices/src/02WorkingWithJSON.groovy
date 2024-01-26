@@ -1,5 +1,6 @@
-import groovy.json.JsonSlurper
+//https://docs.groovy-lang.org/next/html/gapi/groovy/json/JsonSlurper.html
 import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
 
 JsonBuilder builder = new JsonBuilder()
 
@@ -21,7 +22,7 @@ builder.books {
 new File('data/books.json').write(builder.toPrettyString())
 
 JsonSlurper slurper = new JsonSlurper()
-def json = slurper.parse(new File('data/books.json'))
+def json = slurper.parse(new File('data/02WorkingWithJSON.json'))
 
 println json.books.currentBook
 println json.books.currentBook.title

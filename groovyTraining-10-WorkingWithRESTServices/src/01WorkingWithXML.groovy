@@ -1,7 +1,8 @@
+//https://docs.groovy-lang.org/next/html/gapi/groovy/xml/XmlSlurper.html
 import groovy.xml.MarkupBuilder
 import groovy.xml.XmlSlurper
 
-FileWriter writer = new FileWriter('data/sports.xml')
+FileWriter writer = new FileWriter('data/01WorkingWithXML.xml')
 MarkupBuilder builder = new MarkupBuilder(writer)
 builder.doubleQuotes = true
 
