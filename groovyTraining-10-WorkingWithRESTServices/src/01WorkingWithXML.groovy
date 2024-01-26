@@ -22,7 +22,7 @@ builder.sports {
 
 }
 
-def sports = new XmlSlurper().parse('data/sports.xml')
+def sports = new XmlSlurper().parse('data/01WorkingWithXML.xml')
 println sports
 println sports.sport[2].name
 println '----------------------------'

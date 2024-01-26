@@ -19,7 +19,7 @@ builder.books {
     }
 }
 
-new File('data/books.json').write(builder.toPrettyString())
+new File('data/02WorkingWithJSON.json').write(builder.toPrettyString())
 
 JsonSlurper slurper = new JsonSlurper()
 def json = slurper.parse(new File('data/02WorkingWithJSON.json'))
