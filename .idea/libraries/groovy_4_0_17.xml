@@ -72,6 +72,7 @@
       <root url="jar://$PROJECT_DIR$/../../../../groovy/groovy-4.0.17/lib/testng-7.5.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../groovy/groovy-4.0.17/lib/xstream-1.4.20.jar!/" />
       <root url="jar://$PROJECT_DIR$/../../../../Program Files/MySQL/mysql-connector-java-8.0.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../spring/spring-3.2.2/lib/spring-boot-cli-3.2.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
