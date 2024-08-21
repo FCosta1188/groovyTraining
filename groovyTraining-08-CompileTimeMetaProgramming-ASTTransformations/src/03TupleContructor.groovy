@@ -9,7 +9,7 @@ class Person {
     String last
     String email
 
-    // TupleConstructor creates a constructor based in the class properties, following the order in which they are declared
+    // TupleConstructor creates a constructor based on the class properties, following the order in which they are declared
 }
 
 Person p = new Person("Dan","Vega","danvega@gmail.com")
